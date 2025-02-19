@@ -1,3 +1,56 @@
 ---
 ---
 @import "main";
+
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    text-align: center;
+    background-color: #c4c4c5; /* Adjust the background color as needed */
+    padding: 10px 0; /* Adjust the padding as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+
+    .nav-button {
+        display: inline-block;
+        padding: 10px 20px; /* Adjust the padding as needed */
+        color: #fff; /* Button text color */
+        text-decoration: none; /* Remove underline from links */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+}
+
+.nav-home-button {
+    background-color: #00efa7b6; /* Button background color */ 
+   
+    &:hover {
+        background-color: #019662; /* Button background color on hover */
+    }
+}
+
+.nav-about-button {
+    background-color: #ae00dab6; /* Button background color */ 
+   
+    &:hover {
+        background-color: #8000b3; /* Button background color on hover */
+    }
+}
+
+.nav-blog-button {
+    background-color: #00f7ebb6; /* Button background color */ 
+
+    &:hover {
+        background-color: #00b3ad; /* Button background color on hover */
+    }
+}
+
+.nav-staff-button {
+    background-color: #fb00ffb6; /* Button background color */ 
+    &:hover {
+        background-color: #b300ad; /* Button background color on hover */
+    }
+}
