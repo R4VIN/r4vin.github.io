@@ -1,7 +1,13 @@
 <nav class="nav-bar">
-  <a href="/" class="nav-button nav-home-button">Home</a>
-  <a href="/about" class="nav-button nav-about-button">About</a>
-  <a href="/blog" class="nav-button nav-blog-button">Blog</a>
-  <a href="/staff" class="nav-button nav-staff-button">Staff</a>
-</nav> 
- 
+  {% for item in site.data.navigation %}
+  <a href="{{ item.link }}" class="nav-button
+    {% if page.url == item.link %} current {% endif %}
+    {% if item.link == "/" %} nav-home-button {% endif %}
+    {% if item.link == "/about" %} nav-about-button {% endif %}
+    {% if item.link == "/blog" %} nav-blog-button {% endif %}
+    {% if item.link == "/staff" %} nav-staff-button {% endif %}
+  ">
+    {{ item.name }}
+  </a>
+{% endfor %}
+</nav>
